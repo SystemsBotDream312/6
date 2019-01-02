@@ -1,37 +1,6 @@
-﻿const Discord = require('discord.js');
+const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "6";
-var adminprefix = '6'
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);  
-});
-
-client.on('ready', async() => {
-var server = "528071000894734366"; // ايدي السررفر
-var channel = "528071143601602560";//ايدي الروم
-    setInterval(()=>{
-    client.guilds.get(server).channels.get(channel).send('**Ayman , Ayman , Ayman , Ayman , Ayman , Ayman , Ayman , Ayman , Ayman , Ayman , Ayman , Ayman , Ayman , Ayman , Ayman , Ayman , Ayman , Ayman , **')
-    },305);
-})
-
-    client.on('message', message => {
-        var prefix = "6";
-        if (message.author.bot) return;
-        if (!message.content.startsWith(prefix)) return;
-      
-        let command = message.content.split(" ")[0];
-        command = command.slice(prefix.length);
-      
-      
-      let args = message.content.split(" ").slice(1);
-      let x = args.join(" ")
-        if(message.content.startsWith(prefix + 'say')) {
-            message.channel.send(''+x);
-                message.delete(999)
-        }
-        
-       
-      });
+var adminprefix = '1'
 	  
 const developers = ["472413769700474901","411852774767198219"]
 client.on('message', message => {
